@@ -13,7 +13,7 @@ module "jumphost" {
   projectPrefix = "PrefixNAME"
   resourceOwner = "OwnerName"
   vpc           = "vpc-aaaaaaaaaaaaa"
-  keyName       = "syamada"
+  keyName       = "instance key name"
   mgmtSubnet    = "subnet-aaaaaaaaaaaa"
   securityGroup = "sg-aaaaaaaaaaaaa"
 }
