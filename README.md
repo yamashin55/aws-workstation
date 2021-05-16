@@ -1,1 +1,1 @@
-# aws-workstation
+# aws-create-workstation
