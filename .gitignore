@@ -51,4 +51,4 @@ terraform.rc
 DO_1nic.json
 
 #local
-.local
+*.self
