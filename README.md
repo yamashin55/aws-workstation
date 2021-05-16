@@ -1,12 +1,12 @@
 # aws-create-workstation
 
-
-usage 
+##usage 
 
 git clone
+
 vi main.tf
 
-`
+```bash
 module "jumphost" {
   source        = "./workstation"
   coderAccountPassword = random_password.password.result
@@ -17,8 +17,8 @@ module "jumphost" {
   mgmtSubnet    = "subnet-aaaaaaaaaaaa"
   securityGroup = "sg-aaaaaaaaaaaaa"
 }
-
-`
+```
  
 terraform init
+
 terraform apply
