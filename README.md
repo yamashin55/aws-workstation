@@ -1,6 +1,6 @@
 # aws-create-workstation
 
-##usage 
+## usage 
 
 git clone
 
