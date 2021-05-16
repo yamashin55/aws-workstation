@@ -49,3 +49,6 @@ terraform.rc
 
 #BIGIP AWS module files
 DO_1nic.json
+
+#local
+.local
