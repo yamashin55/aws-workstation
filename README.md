@@ -2,9 +2,9 @@
 
 ## Usage 
 
-git clone https://.......
+```git clone https://....... ```
 
-vi main.tf
+```vi main.tf```
 
 ```bash
 module "jumphost" {
@@ -19,14 +19,16 @@ module "jumphost" {
 }
 ```
  
-terraform init
+```terraform init```
 
-terraform apply
+```terraform apply```
 
 ![](./images/02.png)
 
-Code-Server listening.
+Listening Code-Server.
 
 URL:  http://<IPADDRESS>:8080
-PASS: 
+
+PASS: <coderAccountPassword>
+
 ![](./images/01.png)
