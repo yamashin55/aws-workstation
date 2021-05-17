@@ -27,8 +27,8 @@ module "jumphost" {
 
 Listening Code-Server.
 
-URL:  ***http://<<IPADDRESS>>:8080***
+URL:  ***http://[jumphostPublicIp]:8080***
 
-PASS: ***<<coderAccountPassword>>***
+PASS: ***[coderAccountPassword]***
 
 ![](./images/01.png)
