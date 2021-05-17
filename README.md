@@ -1,8 +1,8 @@
 # aws-create-workstation
 
-## usage 
+## Usage 
 
-git clone
+git clone https://.......
 
 vi main.tf
 
@@ -10,7 +10,7 @@ vi main.tf
 module "jumphost" {
   source        = "./workstation"
   coderAccountPassword = random_password.password.result
-  projectPrefix = "PrefixNAME"
+  projectPrefix = "PrefixName"
   resourceOwner = "OwnerName"
   vpc           = "vpc-aaaaaaaaaaaaa"
   keyName       = "instance key name"
@@ -22,3 +22,11 @@ module "jumphost" {
 terraform init
 
 terraform apply
+
+![](./images/02.png)
+
+Code-Server listening.
+
+URL:  http://<IPADDRESS>:8080
+PASS: 
+![](./images/01.png)
