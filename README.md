@@ -1,16 +1,16 @@
 # aws-create-workstation
 
-## usage 
+## Usage 
 
-git clone
+```git clone https://....... ```
 
-vi main.tf
+```vi main.tf```
 
 ```bash
 module "jumphost" {
   source        = "./workstation"
   coderAccountPassword = random_password.password.result
-  projectPrefix = "PrefixNAME"
+  projectPrefix = "PrefixName"
   resourceOwner = "OwnerName"
   vpc           = "vpc-aaaaaaaaaaaaa"
   keyName       = "instance key name"
@@ -19,6 +19,16 @@ module "jumphost" {
 }
 ```
  
-terraform init
+```terraform init```
 
-terraform apply
+```terraform apply```
+
+![](./images/02.png)
+
+Listening Code-Server.
+
+URL:  ***http://[jumphostPublicIp]:8080***
+
+PASS: ***[coderAccountPassword]***
+
+![](./images/01.png)
