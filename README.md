@@ -1,5 +1,15 @@
 # aws-create-workstation
 
+=====Installed LIST=====  
+
+- terraform  
+- f5-cli   
+- aws-cli  
+- kubectl  
+- eksctl  
+
+=====Installed LIST=====
+
 ## Usage 
 
 ```git clone https://....... ```
