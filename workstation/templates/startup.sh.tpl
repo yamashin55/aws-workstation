@@ -35,11 +35,15 @@ set -ex \
 && pip3 install f5-cli \
 && complete -C '/usr/bin/aws_completer' aws \
 && terraform -install-autocomplete \
-&& source /usr/share/bash-completion/bash_completion \
+&& echo "kubectl" \
+&& curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl" \
+&& chmod +x ./kubectl \
+&& sudo mv ./kubectl /usr/local/bin/kubectl \
 && echo 'source <(kubectl completion bash)' >>~/.bashrc
 && kubectl completion bash >/etc/bash_completion.d/kubectl \
 && echo 'alias k=kubectl' >>~/.bashrc \
 && echo 'complete -F __start_kubectl k' >>~/.bashrc
+&& source /usr/share/bash-completion/bash_completion \
 
 echo "test tools"
 echo '# test tools' >>/home/$user/.bashrc
