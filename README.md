@@ -23,12 +23,14 @@ module "jumphost" {
 
 ```terraform apply```
 
+```Enter a value: yes```
+
 ![](./images/02.png)
 
 Listening Code-Server.
 
-URL:  ***http://[jumphostPublicIp]:8080***
+URL:  **http://[jumphostPublicIp]:8080**
 
-PASS: ***[coderAccountPassword]***
+PASS: **[coderAccountPassword]**
 
 ![](./images/01.png)

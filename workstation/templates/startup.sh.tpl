@@ -34,7 +34,12 @@ set -ex \
 && echo "f5 cli" \
 && pip3 install f5-cli \
 && complete -C '/usr/bin/aws_completer' aws \
-&& terraform -install-autocomplete
+&& terraform -install-autocomplete \
+&& source /usr/share/bash-completion/bash_completion \
+&& echo 'source <(kubectl completion bash)' >>~/.bashrc
+&& kubectl completion bash >/etc/bash_completion.d/kubectl \
+&& echo 'alias k=kubectl' >>~/.bashrc \
+&& echo 'complete -F __start_kubectl k' >>~/.bashrc
 
 echo "test tools"
 echo '# test tools' >>/home/$user/.bashrc
@@ -45,6 +50,7 @@ echo "=====Installed Versions====="
 terraform -version
 f5 --version
 aws --version
+echo "kubectl:  `kubectl version --short --client`"
 echo "=====Installed Versions====="
 EOF
 echo "clone repositories"
