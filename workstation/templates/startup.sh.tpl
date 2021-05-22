@@ -46,6 +46,10 @@ set -ex \
 && echo "eksctl" \
 && curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp \
 && sudo mv /tmp/eksctl /usr/local/bin \
+&& echo "heml3 binary" \
+&& curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > get_helm.sh \
+&& chmod 700 get_helm.sh \
+&& ./get_helm.sh \
 && source /usr/share/bash-completion/bash_completion
 
 echo "test tools"
@@ -59,6 +63,7 @@ f5 --version
 aws --version
 eksctl version
 echo "kubectl:  `kubectl version --short --client`"
+echo "hem: `helm version --short`"
 echo "=====Installed Versions====="
 EOF
 echo "clone repositories"

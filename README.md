@@ -7,6 +7,7 @@
 - aws-cli  
 - kubectl  
 - eksctl  
+- helm3
 
 =====Installed LIST=====
 
