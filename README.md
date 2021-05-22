@@ -45,3 +45,7 @@ URL:  **http://[jumphostPublicIp]:8080**
 PASS: **[coderAccountPassword]**
 
 ![](./images/01.png)
+
+### Deletet Workstation
+
+```terraform destroy```
