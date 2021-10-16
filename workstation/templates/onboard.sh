@@ -33,7 +33,10 @@ set -ex \
 && sudo wget https://releases.hashicorp.com/terraform/"$terraformVersion"/terraform_"$terraformVersion"_linux_amd64.zip \
 && sudo unzip ./terraform_"$terraformVersion"_linux_amd64.zip -d /usr/local/bin/ \
 && echo "awscli" \
-&& sudo apt-get install awscli -y \
+&& curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
+&& unzip awscliv2.zip \
+&& sudo ./aws/install \
+&& ./aws/install -i /usr/local/aws-cli -b /usr/local/bin \
 && echo "f5 cli" \
 && pip3 install f5-cli \
 && echo "terragrunt" \
