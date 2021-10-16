@@ -11,10 +11,10 @@ provider "aws" {
 module "jumphost" {
   source        = "./workstation"
   coderAccountPassword = random_password.password.result
-  projectPrefix = "PrefixName"
-  resourceOwner = "OwnerName"
-  vpc           = "vpc-aaaaaaaaaaaaa"
-  keyName       = "instance key name"
-  mgmtSubnet    = "subnet-aaaaaaaaaaaa"
-  securityGroup = "sg-aaaaaaaaaaaaa"
+  projectPrefix = "syamada"
+  resourceOwner = "syamada"
+  vpc           = "vpc-a3cc17db"
+  keyName       = "syamada"
+  mgmtSubnet    = "subnet-09857e6044f477e0c"
+  securityGroup = "sg-075640dd481103c89"
 }
